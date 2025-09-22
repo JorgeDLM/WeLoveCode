@@ -21,6 +21,11 @@ function WhatsAppSentContent() {
           event_label: pkg || 'general',
           value: 1
         });
+        
+        // Google Ads Conversion Tracking
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-17562407817/VJpmCJ24758bEImntLZB'
+        });
       }
       
       // Guardar en localStorage
