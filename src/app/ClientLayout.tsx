@@ -59,54 +59,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                 </div>
               </div>
             </a>
-          </div>
-          {/* Mobile menu button */}
-          <button 
-            onClick={toggleMobileMenu}
-            className="md:hidden text-white hover:text-purple-400 transition-colors"
-          >
-            {isMobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+          </div>          
         </div>
-        
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-900/98 backdrop-blur-sm border-t border-purple-500/20">
-            <nav className="flex flex-col space-y-4 mt-8">
-              <a 
-                href="#casos" 
-                onClick={closeMobileMenu}
-                className="block text-gray-300 hover:text-purple-400 transition font-medium py-2"
-              >
-                Casos de Éxito
-              </a>
-              <a 
-                href="mailto:welovecode.mx@gmail.com" 
-                onClick={closeMobileMenu}
-                className="block text-gray-300 hover:text-purple-400 transition font-medium py-2"
-              >
-                Contacto
-              </a>
-              <button
-                onClick={() => {
-                  openModal();
-                  closeMobileMenu();
-                }}
-                className="w-full mt-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg font-bold hover:from-green-600 hover:to-green-700 transition-all"
-              >
-                Cotizar Proyecto
-              </button>
-            </nav>
-          </div>
-        )}
       </header>
 
       {/* Floating CTA Button */}

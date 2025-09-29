@@ -95,9 +95,10 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
       <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-green-600/20 blur-2xl rounded-3xl" />
       <div className="relative bg-gradient-to-br from-slate-900/80 to-purple-900/60 border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-2">
-            Cuéntanos sobre tu proyecto
-          </h2>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-[0.95] bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent animate-fade-in-up mb-4">
+            <span className="block">Convertimos tus ideas en</span>
+            <span className="text-green-400 animate-pulse drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">tecnología</span>
+          </h1>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-6">
@@ -117,7 +118,7 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm text-gray-300 mb-2" htmlFor="company">
                 Empresa (opcional)
@@ -154,7 +155,7 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
                 ))}
               </select>
             </div>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
