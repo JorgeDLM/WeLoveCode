@@ -11,6 +11,11 @@ function WhatsAppSentContent() {
     const pkg = searchParams.get('pkg') || '';
     const src = searchParams.get('src') || 'web';
     const name = searchParams.get('name') || '';
+    const company = searchParams.get('company') || '';
+    const budget = searchParams.get('budget') || '';
+    const urgency = searchParams.get('urgency') || '';
+    const ref = searchParams.get('ref') || '';
+    const details = searchParams.get('details') || '';
     
     // Registrar conversión
     if (typeof window !== 'undefined') {
@@ -34,6 +39,9 @@ function WhatsAppSentContent() {
         package: pkg,
         source: src,
         name: name,
+        company: company,
+        budget: budget,
+        urgency: urgency,
         url: window.location.href
       };
       
@@ -48,9 +56,24 @@ function WhatsAppSentContent() {
     if (name) {
       message += `\n\n👤 Nombre: ${name}`;
     }
+    if (company) {
+      message += `\n🏢 Empresa: ${company}`;
+    }
     
     if (pkg) {
       message += `\n📦 Paquete de interés: ${pkg}`;
+    }
+    if (budget) {
+      message += `\n💸 Presupuesto: ${budget}`;
+    }
+    if (urgency) {
+      message += `\n⏱️ Urgencia: ${urgency}`;
+    }
+    if (ref) {
+      message += `\n🔗 Referencia: ${ref}`;
+    }
+    if (details) {
+      message += `\n\n📝 Detalles:\n${details}`;
     }
     
     message += '\n\nEspero su respuesta para agendar una consulta. ¡Gracias!';

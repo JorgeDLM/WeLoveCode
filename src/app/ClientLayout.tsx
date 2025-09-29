@@ -60,13 +60,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               </div>
             </a>
           </div>
-          <nav className="hidden md:flex gap-6 items-center">
-            <a href="#servicios" className="text-gray-300 hover:text-purple-400 transition font-medium">Servicios</a>
-            <a href="#casos" className="text-gray-300 hover:text-purple-400 transition font-medium">Casos de Éxito</a>
-            <a href="#precios" className="text-gray-300 hover:text-purple-400 transition font-medium">Precios</a>
-            <a href="#contacto" className="text-gray-300 hover:text-purple-400 transition font-medium">Contacto</a>
-          </nav>
-          
           {/* Mobile menu button */}
           <button 
             onClick={toggleMobileMenu}
@@ -87,14 +80,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-slate-900/98 backdrop-blur-sm border-t border-purple-500/20">
-            <nav className="px-4 py-6 space-y-4">
-              <a 
-                href="#servicios" 
-                onClick={closeMobileMenu}
-                className="block text-gray-300 hover:text-purple-400 transition font-medium py-2"
-              >
-                Servicios
-              </a>
+            <nav className="flex flex-col space-y-4 mt-8">
               <a 
                 href="#casos" 
                 onClick={closeMobileMenu}
@@ -103,14 +89,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                 Casos de Éxito
               </a>
               <a 
-                href="#precios" 
-                onClick={closeMobileMenu}
-                className="block text-gray-300 hover:text-purple-400 transition font-medium py-2"
-              >
-                Precios
-              </a>
-              <a 
-                href="#contacto" 
+                href="mailto:welovecode.mx@gmail.com" 
                 onClick={closeMobileMenu}
                 className="block text-gray-300 hover:text-purple-400 transition font-medium py-2"
               >
@@ -166,8 +145,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               <h4 className="font-bold mb-4">Empresa</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#casos" className="hover:text-white transition">Casos de Éxito</a></li>
-                <li><a href="#" className="hover:text-white transition">Sobre Nosotros</a></li>
-                <li><a href="#" className="hover:text-white transition">Blog</a></li>
               </ul>
             </div>
             <div>
