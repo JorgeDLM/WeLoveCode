@@ -23,11 +23,11 @@ const interests = [
 ];
 
 const budgets = [
-  "$10k - $20k MXN",
-  "$20k - $50k MXN",
-  "$50k - $100k MXN",
-  "+$100k MXN",
-  "Aún no lo sé",
+  "$10,000",
+  "$20,000",
+  "$50,000",
+  "$100,000+",
+  "No lo sé",
 ];
 
 const urgencies = [
@@ -69,15 +69,15 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
       alert("Por favor ingresa tu nombre");
       return;
     }
-    if (!form.interest.trim()) {
-      alert("Por favor selecciona qué necesitas");
+    if (!form.budget.trim()) {
+      alert("Por favor selecciona tu presupuesto");
       return;
     }
 
     setSubmitting(true);
 
     const params = new URLSearchParams();
-    params.set("pkg", form.interest);
+    params.set("pkg", "Desarrollo Web/App");
     params.set("src", "form");
     params.set("name", form.name);
     if (form.company) params.set("company", form.company);
@@ -93,15 +93,15 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
   return (
     <section className="relative max-w-3xl mx-auto w-full">
       <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-green-600/20 blur-2xl rounded-3xl" />
-      <div className="relative bg-gradient-to-br from-slate-900/80 to-purple-900/60 border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl">
-        <div className="mb-8 text-center">
+      <div className="relative bg-gradient-to-br from-slate-900/80 to-purple-900/60 border border-white/10 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl">
+        <div className="mb-6 sm:mb-8 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-[0.95] bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent animate-fade-in-up mb-4">
             <span className="block">Convertimos tus ideas en</span>
             <span className="text-green-400 animate-pulse drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">tecnología</span>
           </h1>
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-6">
+        <form onSubmit={onSubmit} className="space-y-4 sm:space-y-6">
           <div>
             <label className="block text-sm text-gray-300 mb-2" htmlFor="name">
               Nombre completo *
@@ -157,7 +157,7 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
             </div>
           </div> */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
               <label className="block text-sm text-gray-300 mb-2" htmlFor="budget">
                 Presupuesto *
@@ -167,9 +167,10 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
                 name="budget"
                 value={form.budget}
                 onChange={onChange}
-                className="w-full px-4 py-3 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+                className="w-full px-4 py-3 h-12 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 appearance-none"
+                required
               >
-                <option value="" className="bg-slate-800 text-white">
+                <option value="" disabled className="bg-slate-800 text-gray-500">
                   Selecciona
                 </option>
                 {budgets.map((opt) => (
@@ -188,9 +189,9 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
                 name="urgency"
                 value={form.urgency}
                 onChange={onChange}
-                className="w-full px-4 py-3 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+                className="w-full px-4 py-3 h-12 bg-slate-800 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 appearance-none"
               >
-                <option value="" className="bg-slate-800 text-white">
+                <option value="" disabled className="bg-slate-800 text-gray-500">
                   Selecciona
                 </option>
                 {urgencies.map((opt) => (
@@ -223,8 +224,7 @@ export default function ProjectForm({ defaultInterest }: { defaultInterest?: str
               disabled={submitting}
               className="flex-1 px-6 py-4 bg-green-600 text-white rounded-lg font-bold hover:bg-green-700 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
             >
-
-              Cotizar
+              {submitting ? "Enviando..." : "Cotizar"}
             </button>
           </div>
         </form>

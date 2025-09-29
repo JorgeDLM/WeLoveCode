@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen w-full text-white">
       {/* Hero + Form Section Integrada */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative py-5 tablet:py-0 tablet:min-h-screen flex items-center justify-center overflow-hidden">
         {/* Enhanced Background with Multiple Layers */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/60 via-blue-900/40 to-black/80"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent"></div>
@@ -18,7 +18,7 @@ export default function Home() {
         <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-40"></div>
         <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce opacity-50"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-16 w-full">
           <div className="grid lg:grid-cols-1 items-center">
             {/* Hero Content */}
             

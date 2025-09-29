@@ -64,7 +64,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       </header>
 
       {/* Floating CTA Button */}
-      <button
+      {/* <button
         onClick={() => openModal()}
         className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-full font-bold shadow-2xl hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-110 animate-bounce-subtle flex items-center gap-2"
       >
@@ -73,7 +73,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         </svg>
         <span className="hidden sm:inline">Cotizar</span>
       </button>
-      
+       */}
       <main className="pt-20">{children}</main>
       
       <footer className="bg-black text-white py-12">
