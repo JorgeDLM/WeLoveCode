@@ -51,29 +51,29 @@ function WhatsAppSentContent() {
     }
 
     // Crear mensaje para WhatsApp
-    let message = '¡Hola! Me interesa trabajar con WeLoveCode 🚀';
+    let message = '¡Hola! Me interesa trabajar con WeLoveCode';
     
     if (name) {
-      message += `\n\n👤 Nombre: ${name}`;
+      message += `\n\n• Nombre: ${name}`;
     }
     if (company) {
-      message += `\n🏢 Empresa: ${company}`;
+      message += `\n• Empresa: ${company}`;
     }
     
     if (pkg) {
-      message += `\n📦 Paquete de interés: ${pkg}`;
+      message += `\n• Proyecto: ${pkg}`;
     }
     if (budget) {
-      message += `\n💸 Presupuesto: ${budget}`;
+      message += `\n• Presupuesto: ${budget}`;
     }
     if (urgency) {
-      message += `\n⏱️ Urgencia: ${urgency}`;
+      message += `\n• Urgencia: ${urgency}`;
     }
     if (ref) {
-      message += `\n🔗 Referencia: ${ref}`;
+      message += `\n• Referencia: ${ref}`;
     }
     if (details) {
-      message += `\n\n📝 Detalles:\n${details}`;
+      message += `\n\n• Detalles:\n${details}`;
     }
     
     message += '\n\nEspero su respuesta para agendar una consulta. ¡Gracias!';
