@@ -48,7 +48,7 @@ export default function Home() {
           
           <div className="flex flex-col space-y-5 tablet:space-y-16">
             {/* RILSA Project */}
-            <div className="order-3 md:order-1 group bg-gradient-to-br from-purple-900/10 to-transparent border border-purple-500/50 md:border-none md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 ">
+            <div className="order-3 mt-5 tablet:mt-0 md:order-1 group bg-gradient-to-br from-purple-900/10 to-transparent border border-purple-500/50 md:border-none md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 ">
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Texto - Siempre primero en móvil */}
                 <div className="order-1">
@@ -103,7 +103,7 @@ export default function Home() {
 
             {/* Mercado Web Project */}
             <a href="https://www.mercadoalamano.com" target="_blank" rel="noopener noreferrer" className="block order-1 md:order-2">
-              <div className="group bg-gradient-to-br from-green-900/10 to-transparent md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 border border-green-500/50 md:border-none cursor-pointer hover:bg-green-900/20 transition-colors duration-300">
+              <div className="group bg-gradient-to-br -mt-10 tablet:mt-0 from-green-900/10 to-transparent md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 border border-green-500/50 md:border-none cursor-pointer hover:bg-green-900/20 transition-colors duration-300">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   {/* Texto - Primero en móvil, segundo en desktop */}
                   <div className="order-1 lg:order-2">
