@@ -46,9 +46,9 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="space-y-5 tablet:space-y-16">
+          <div className="flex flex-col space-y-5 tablet:space-y-16">
             {/* RILSA Project */}
-            <div className="group bg-gradient-to-br from-purple-900/10 to-transparent border border-purple-500/50 md:border-none md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 ">
+            <div className="order-3 md:order-1 group bg-gradient-to-br from-purple-900/10 to-transparent border border-purple-500/50 md:border-none md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 ">
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Texto - Siempre primero en móvil */}
                 <div className="order-1">
@@ -102,10 +102,11 @@ export default function Home() {
             </div>
 
             {/* Mercado Web Project */}
-            <div className="group bg-gradient-to-br from-green-900/10 to-transparent md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 border border-green-500/50 md:border-none">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                {/* Texto - Siempre primero en móvil */}
-                <div className="order-1">
+            <a href="https://www.mercadoalamano.com" target="_blank" rel="noopener noreferrer" className="block order-1 md:order-2">
+              <div className="group bg-gradient-to-br from-green-900/10 to-transparent md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 border border-green-500/50 md:border-none cursor-pointer hover:bg-green-900/20 transition-colors duration-300">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                  {/* Texto - Primero en móvil, segundo en desktop */}
+                  <div className="order-1 lg:order-2">
                   <div className="flex items-center gap-4 mb-6">
                     <Image 
                       src="/mercado-logo.svg" 
@@ -132,8 +133,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                {/* Imágenes - Segundo en móvil */}
-                <div className="order-2 relative">
+                {/* Imágenes - Segundo en móvil, primero en desktop */}
+                <div className="order-2 lg:order-1 relative">
                   <Image 
                     src="/mercado-web-laptop-1.png" 
                     alt="Mercado Web Platform" 
@@ -154,9 +155,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </a>
 
             {/* Mercado App Project - Centered */}
-            <div className="group bg-gradient-to-br from-blue-900/10 to-transparent md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 border border-blue-500/50 md:border-none max-w-4xl mx-auto">
+            <div className="order-2 md:order-3 group bg-gradient-to-br from-blue-900/10 to-transparent md:bg-none rounded-3xl md:rounded-none p-6 lg:p-8 border border-blue-500/50 md:border-none max-w-4xl mx-auto">
               <div className="text-center mb-8 lg:mb-12">
                 <div className="flex items-center gap-4 justify-center mb-6">
                   <Image 
@@ -178,9 +180,6 @@ export default function Home() {
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
                   <div className="bg-blue-900/30 px-4 py-2 rounded-lg">
                     <span className="text-blue-300 font-semibold text-sm">iOS & Android</span>
-                  </div>
-                  <div className="bg-blue-900/30 px-4 py-2 rounded-lg">
-                    <span className="text-blue-300 font-semibold text-sm">Experiencia Nativa</span>
                   </div>
                 </div>
               </div>
