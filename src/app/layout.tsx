@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="overflow-x-hidden">
       <head>
         <meta property="og:title" content="WeLoveCode | Desarrollo de Software que Genera Millones" />
         <meta property="og:description" content="Convertimos tu idea en un negocio de $1M+. Somos arquitectos de ingresos digitales con más de $50M recaudados por nuestros clientes." />
@@ -87,7 +87,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className + " bg-gray-50 min-h-screen select-none"}>
+      <body className={inter.className + " bg-gray-50 min-h-screen select-none overflow-x-hidden"}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
