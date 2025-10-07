@@ -10,7 +10,7 @@ const services = [
     id: 'web',
     title: 'Desarrollo Web',
     description: 'Sitios web modernos, rápidos y optimizados que convierten visitantes en clientes',
-    image: '/rilsa-web-laptop-1.png',
+    image: '/client-laptop-1.png',
     result: '$1M+ en ventas mensuales'
   },
   {
@@ -31,7 +31,7 @@ const services = [
     id: 'ai',
     title: 'Integraciones con IA',
     description: 'Automatizaciones inteligentes que potencian tu negocio con inteligencia artificial',
-    image: '/rilsa-web-movil-1.png',
+    image: '/rilsa-web-laptop-1.png',
     result: 'Respuestas automáticas 24/7'
   }
 ];

@@ -186,8 +186,8 @@ export const projects: Project[] = [
     mainImage: '/poramoralcampo-app.png',
     gallery: ['/poramoralcampo-app.png', '/poramoralcampo-web.webp'],
     stats: [
-      { label: 'Productores', value: '+50' },
-      { label: 'Ventas Mensuales', value: '$500K+' }
+      { label: 'Productos', value: '+1,000' },
+      { label: 'Mejor pago a productores', value: '+100%' },
     ],
     color: 'emerald',
     link: 'https://www.poramoralcampo.com',

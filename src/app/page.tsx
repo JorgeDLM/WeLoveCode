@@ -3,7 +3,7 @@
 import TypewriterHero from "../components/TypewriterHero";
 import ServicesSection from "../components/ServicesSection";
 import TechnologiesSection from "../components/TechnologiesSection";
-import PortfolioSection from "../components/PortfolioSection";
+import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectForm from "../components/ProjectForm";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -22,8 +22,8 @@ export default function Home() {
       {/* Technologies Section */}
       <TechnologiesSection />
 
-      {/* Portfolio Section */}
-      <PortfolioSection />
+      {/* Projects Carousel */}
+      <ProjectsCarousel />
 
       {/* Contact Form Section */}
       <section id="contacto" className="relative py-20 bg-gradient-to-b from-black to-slate-900">

@@ -19,6 +19,7 @@ const config: Config = {
         'scroll': 'scroll 30s linear infinite',
         'scroll-fast': 'scroll 10s linear infinite',
         'scroll-faster': 'scroll 7s linear infinite',
+        'scroll-projects': 'scrollReverse 6s linear infinite',
         'energy-flow': 'energyFlow 3s ease-in-out infinite',
       },
       keyframes: {
@@ -38,6 +39,14 @@ const config: Config = {
           },
           '100%': {
             transform: 'translateX(-50%)',
+          },
+        },
+        scrollReverse: {
+          '0%': {
+            transform: 'translateX(-33.333%)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
           },
         },
         energyFlow: {

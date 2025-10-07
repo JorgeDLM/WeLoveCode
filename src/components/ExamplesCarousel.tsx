@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import InfiniteCarousel from './InfiniteCarousel';
 
 interface Example {
   name: string;
@@ -18,70 +19,8 @@ interface ExamplesCarouselProps {
 }
 
 export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarouselProps) {
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-
   // Si hay 2 o menos ejemplos, mostrar layout estático
   const useStaticLayout = examples.length <= 2;
-
-  // Duplicamos para efecto infinito solo si hay más de 2 ejemplos
-  const duplicatedExamples = useStaticLayout ? examples : [...examples, ...examples, ...examples];
-
-  useEffect(() => {
-    // No animar si es layout estático
-    if (useStaticLayout || !containerRef.current || isPaused) return;
-
-    const container = containerRef.current;
-    let animationId: number;
-    let scrollPosition = container.scrollWidth / 3; // Empezar en el segundo set
-
-    const animate = () => {
-      scrollPosition -= 0.5; // Velocidad del scroll automático (negativo = reversa)
-      container.scrollLeft = scrollPosition;
-
-      // Reset cuando llega al inicio
-      if (scrollPosition <= 0) {
-        scrollPosition = container.scrollWidth / 3;
-      }
-
-      animationId = requestAnimationFrame(animate);
-    };
-
-    animationId = requestAnimationFrame(animate);
-
-    return () => cancelAnimationFrame(animationId);
-  }, [isPaused, useStaticLayout]);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-    setIsPaused(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !containerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    setTimeout(() => setIsPaused(false), 1000);
-  };
-
-  const handleMouseLeave = () => {
-    if (isDragging) {
-      setIsDragging(false);
-      setTimeout(() => setIsPaused(false), 1000);
-    }
-  };
 
   // Encontrar el ID del proyecto basado en el nombre
   const getProjectSlug = (name: string) => {
@@ -101,7 +40,7 @@ export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarous
     return (
       <div className="py-8 px-4">
         <div className={`grid ${examples.length === 1 ? 'grid-cols-1 max-w-xl mx-auto' : 'grid-cols-1 md:grid-cols-2'} gap-10`}>
-          {duplicatedExamples.map((example, index) => (
+          {examples.map((example, index) => (
           <div
             key={`${example.name}-${index}`}
             className="group w-full max-w-xl mx-auto"
@@ -195,13 +134,7 @@ export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarous
   }
 
   // Layout carrusel para más de 2 ejemplos
-  return (
-    <div 
-      ref={containerRef}
-      className="overflow-x-hidden overflow-y-visible py-8"
-    >
-      <div className="flex gap-10 px-4">
-        {duplicatedExamples.map((example, index) => (
+  const carouselItems = examples.map((example, index) => (
           <div
             key={`${example.name}-${index}`}
             className="flex-shrink-0 w-[480px] group"
@@ -288,8 +221,15 @@ export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarous
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+  ));
+
+  return (
+    <InfiniteCarousel 
+      baseSpeed={2.0}
+      gap={40}
+      className="py-8"
+    >
+      {carouselItems}
+    </InfiniteCarousel>
   );
 }
