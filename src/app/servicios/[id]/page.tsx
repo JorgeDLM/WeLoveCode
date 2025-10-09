@@ -369,23 +369,43 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
         <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'linear-gradient(#fff 2px, transparent 2px), linear-gradient(90deg, #fff 2px, transparent 2px)', backgroundSize: '100px 100px'}}></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <span className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-bold mb-6">
-              METODOLOGÍA
-            </span>
-            <h2 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Nuestro Proceso
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              5 pasos simples que garantizan tu éxito
-            </p>
+          {/* Header with Programmer Image */}
+          <div className="text-center md:mb-20">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-8">
+              {/* Text content */}
+              <div className="flex-1 max-w-2xl">
+                <span className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-bold mb-6">
+                  METODOLOGÍA
+                </span>
+                <h2 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  Nuestro Proceso
+                </h2>
+                <p className="text-gray-400 text-xl">
+                  5 pasos simples que garantizan tu éxito
+                </p>
+              </div>
+              
+              {/* Programmer illustration */}
+              <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
+                <Image 
+                  src="/programmer.webp" 
+                  alt="Programador trabajando"
+                  width={320}
+                  height={320}
+                  className="relative z-10 drop-shadow-2xl animate-float"
+                />
+              </div>
+            </div>
           </div>
           
           {/* Process Cards Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {service.process.map((step, index) => {
               const isDesignStep = step.step === 'Diseño' || step.step === 'UI/UX';
+              
+              // Monto de ahorro según el servicio
+              const savingsAmount = params.id === 'apps' ? '80,000' : '25,000';
               
               // Descripciones simples para cada paso del proceso
               const processDescriptions: Record<string, Record<string, string>> = {
@@ -479,7 +499,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
                     <div className="absolute -top-6 -right-6 z-30">
                       <div className="relative bg-gradient-to-r from-green-500 to-emerald-600 text-white px-5 py-2.5 rounded-full shadow-2xl transform rotate-12 animate-pulse border-2 border-green-400">
                         <div className="text-sm font-black tracking-wide">GRATIS</div>
-                        <div className="text-xs font-bold -mt-0.5">Ahorra $25,000</div>
+                        <div className="text-xs font-bold -mt-0.5">Ahorra ${savingsAmount}</div>
                         {/* Glow effect */}
                         <div className="absolute inset-0 bg-green-400/40 rounded-full blur-lg -z-10"></div>
                       </div>
