@@ -7,7 +7,7 @@ export interface Service {
   features: string[];
   process: Array<{ step: string; description: string }>;
   technologies: string[];
-  examples: Array<{ name: string; description: string; image: string; logo?: string }>;
+  examples: Array<{ name: string; description: string; image: string; logo?: string; link?: string }>;
   benefits: string[];
 }
 
@@ -15,8 +15,8 @@ export const services: Service[] = [
   {
     id: 'web',
     title: 'Desarrollo Web',
-    subtitle: 'Sitios web que convierten',
-    description: 'Creamos sitios web modernos, rápidos y optimizados para SEO que transforman visitantes en clientes. Desde landing pages hasta plataformas complejas de e-commerce.',
+    subtitle: 'Sitio web para tu negocio',
+    description: 'Creamos tu página web para que tus clientes te encuentren en Google y puedan comprarte o contactarte 24/7 desde cualquier lugar.',
     icon: '🌐',
     features: [
       'Diseño responsive y moderno',
@@ -36,16 +36,29 @@ export const services: Service[] = [
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'AWS'],
     examples: [
       {
+        name: 'Client',
+        description: 'Portal inmobiliario que revolucionó la venta de propiedades',
+        image: '/client-laptop-1.png',
+        logo: '/client-app-icon.webp'
+      },
+      {
         name: 'Mercado a la Mano',
         description: 'E-commerce completo que genera $1M+ en ventas mensuales',
         image: '/mercado-web-laptop-1.png',
-        logo: '/mercado-logo.svg'
+        logo: '/logo-app.png'
       },
       {
-        name: 'Por Amor al Campo',
-        description: 'Marketplace agrícola con +50 productores conectados',
-        image: '/mercado-web-laptop-1.png',
-        logo: '/poramoralcampo-icon.png'
+        name: 'RILSA',
+        description: 'Plataforma ERP que redujo tiempos de cotización de 10 horas a 5 minutos',
+        image: '/rilsa-web-laptop-1.png',
+        logo: '/rilsa-logo.webp'
+      },
+      {
+        name: 'Renovación Celular',
+        description: 'Sitio web moderno para empresa de telefonía celular',
+        image: '/renovacion-web.webp',
+        logo: '/renovacion-appicon.png',
+        link: 'https://renovacioncelular.com/'
       }
     ],
     benefits: [
@@ -58,8 +71,8 @@ export const services: Service[] = [
   {
     id: 'apps',
     title: 'Desarrollo de Apps Nativas',
-    subtitle: 'iOS y Android de alto rendimiento',
-    description: 'Desarrollamos aplicaciones móviles nativas que ofrecen la mejor experiencia posible en iOS y Android, con rendimiento superior y acceso completo a las funcionalidades del dispositivo.',
+    subtitle: 'Tu app en iPhone y Android',
+    description: 'Creamos tu aplicación móvil para que tus clientes la descarguen en sus celulares. Funciona en iPhone y Android, usa la cámara, GPS y envía notificaciones.',
     icon: '📱',
     features: [
       'Desarrollo nativo para iOS y Android',
@@ -126,8 +139,8 @@ export const services: Service[] = [
   {
     id: 'sistemas',
     title: 'Desarrollo de Sistemas',
-    subtitle: 'CRM y ERP a medida',
-    description: 'Creamos sistemas personalizados que automatizan y optimizan tus procesos empresariales. Desde CRM hasta sistemas ERP completos que se adaptan a tu forma de trabajar.',
+    subtitle: 'Software hecho para tu negocio',
+    description: 'Creamos un sistema personalizado que hace el trabajo repetitivo por ti: controla inventario, genera facturas, hace reportes y organiza todo tu negocio en un solo lugar.',
     icon: '⚙️',
     features: [
       'Automatización de procesos',
@@ -170,8 +183,8 @@ export const services: Service[] = [
   {
     id: 'ai',
     title: 'Integraciones y Automatizaciones con IA',
-    subtitle: 'Potencia tu negocio con IA',
-    description: 'Implementamos soluciones de inteligencia artificial que automatizan tareas repetitivas, mejoran la atención al cliente y optimizan procesos con aprendizaje continuo.',
+    subtitle: 'Un asistente virtual para tu negocio',
+    description: 'Creamos un robot inteligente que atiende a tus clientes por WhatsApp 24/7, responde preguntas automáticamente y hace el trabajo repetitivo mientras tú te enfocas en vender.',
     icon: '🤖',
     features: [
       'Chatbots inteligentes 24/7',

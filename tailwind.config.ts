@@ -15,6 +15,7 @@ const config: Config = {
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite',
+        'fade-in': 'fadeIn 1s ease-out forwards',
         'fade-in-up': 'fadeInUp 0.5s ease-out',
         'scroll': 'scroll 30s linear infinite',
         'scroll-fast': 'scroll 10s linear infinite',
@@ -23,6 +24,16 @@ const config: Config = {
         'energy-flow': 'energyFlow 3s ease-in-out infinite',
       },
       keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.95)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1)',
+          },
+        },
         fadeInUp: {
           '0%': {
             opacity: '0',

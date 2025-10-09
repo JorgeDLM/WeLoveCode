@@ -53,7 +53,7 @@ export default function ProjectsCarousel() {
   return (
     <section 
       id="proyectos-preview" 
-      className="relative py-20 bg-gradient-to-b from-black via-slate-900 to-black overflow-hidden pt-[130px] md:pt-[60px]"
+      className="relative py-8 bg-gradient-to-b from-black via-slate-900 to-black overflow-hidden pt-[10px] md:pt-[20px]"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent"></div>
@@ -62,19 +62,19 @@ export default function ProjectsCarousel() {
         {/* Title Section */}
         <div 
           ref={titleRef}
-          className={`text-center mb-12 transition-all duration-1000 ${
+          className={`text-center mb-0 transition-all duration-1000 ${
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <h2 className="text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent pb-1">
-            Proyectos que generan resultados reales
+            Proyectos que generan resultados
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8 -mt-2">
             <strong className="text-white">$51,000,000+ generados</strong> por nuestros clientes
           </p>
           
           {/* Stats Bar */}
-          <div className="mb-12">
+          <div className="mb-1 md:mb-7">
             <StatsBar />
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function ProjectsCarousel() {
         </div>
 
         {/* Ver todos button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-2 md:mt-7">
           <Link 
             href="/proyectos"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300"

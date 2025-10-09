@@ -112,10 +112,12 @@ export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarous
 
                   {/* CTA Button */}
                   <Link 
-                    href={`/proyectos/${getProjectSlug(example.name)}`}
+                    href={example.link || `/proyectos/${getProjectSlug(example.name)}`}
+                    target={example.link ? '_blank' : undefined}
+                    rel={example.link ? 'noopener noreferrer' : undefined}
                     className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-400 font-bold group-hover:from-purple-600/40 group-hover:to-blue-600/40 group-hover:border-purple-400/60 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-105 transition-all duration-300"
                   >
-                    <span className="text-sm">Ver proyecto completo</span>
+                    <span className="text-sm">{example.link ? 'Visitar sitio web' : 'Ver proyecto completo'}</span>
                     <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -206,10 +208,12 @@ export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarous
 
                   {/* CTA Button */}
                   <Link 
-                    href={`/proyectos/${getProjectSlug(example.name)}`}
+                    href={example.link || `/proyectos/${getProjectSlug(example.name)}`}
+                    target={example.link ? '_blank' : undefined}
+                    rel={example.link ? 'noopener noreferrer' : undefined}
                     className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-400 font-bold group-hover:from-purple-600/40 group-hover:to-blue-600/40 group-hover:border-purple-400/60 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-105 transition-all duration-300"
                   >
-                    <span className="text-sm">Ver proyecto completo</span>
+                    <span className="text-sm">{example.link ? 'Visitar sitio web' : 'Ver proyecto completo'}</span>
                     <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
