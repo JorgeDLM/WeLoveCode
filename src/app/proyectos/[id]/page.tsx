@@ -45,6 +45,12 @@ const colorClasses = {
     border: 'border-emerald-500/50',
     text: 'text-emerald-400',
     bg: 'from-emerald-900/20'
+  },
+  cyan: {
+    gradient: 'from-cyan-900/60 via-teal-900/40',
+    border: 'border-cyan-500/50',
+    text: 'text-cyan-400',
+    bg: 'from-cyan-900/20'
   }
 };
 
@@ -402,6 +408,25 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                   Dashboard Global & Analytics
                 </span>
               </div>
+            </div>
+          ) : project.gallery && project.gallery.length > 2 ? (
+            // Galería completa para proyectos con múltiples imágenes
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {project.gallery.map((image, index) => (
+                <div 
+                  key={index}
+                  className={`relative overflow-hidden rounded-3xl shadow-2xl flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 group ${
+                    index === 0 ? 'md:col-span-2 md:row-span-2 h-[400px] md:h-[600px]' : 'h-[400px] md:h-[290px]'
+                  }`}
+                >
+                  <Image 
+                    src={image} 
+                    alt={`${project.name} - Imagen ${index + 1}`}
+                    fill
+                    className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+              ))}
             </div>
           ) : (
             <div className="grid md:grid-cols-2 gap-8">

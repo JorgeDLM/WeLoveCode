@@ -43,6 +43,12 @@ const colorClasses = {
     gradient: 'from-emerald-500/20 via-emerald-600/10 to-transparent',
     text: 'text-emerald-300',
     glow: 'shadow-emerald-500/50',
+  },
+  cyan: {
+    border: 'border-cyan-500/50',
+    gradient: 'from-cyan-500/20 via-cyan-600/10 to-transparent',
+    text: 'text-cyan-300',
+    glow: 'shadow-cyan-500/50',
   }
 };
 

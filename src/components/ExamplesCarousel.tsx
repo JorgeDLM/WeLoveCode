@@ -30,7 +30,8 @@ export default function ExamplesCarousel({ examples, serviceId }: ExamplesCarous
       'Mercado App': 'mercado-app',
       'FidelityApp': 'fidelity',
       'RILSA': 'rilsa',
-      'Client': 'client'
+      'Client': 'client',
+      'Arribo': 'arribo'
     };
     return slugMap[name] || name.toLowerCase().replace(/\s+/g, '-');
   };

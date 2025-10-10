@@ -126,6 +126,12 @@ export const services: Service[] = [
         description: 'Marketplace de propiedades comisionables que aumentó conversión en +80% y productividad en +150%',
         image: '/client-app-2.webp',
         logo: '/client-app-icon.webp'
+      },
+      {
+        name: 'Arribo',
+        description: 'Valet sin boletito: QR para entrega, pago 1-tap, validación offline. Redujo fraudes en -95% y tiempo de operación en -40%',
+        image: '/arribo-app-1.webp',
+        logo: '/arribo-app-icon.webp'
       }
     ],
     benefits: [
