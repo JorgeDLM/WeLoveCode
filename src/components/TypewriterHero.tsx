@@ -79,7 +79,7 @@ export default function TypewriterHero() {
           </div>
         </div>
         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-          Transformamos tus ideas en tecnología que genera resultados reales
+          <span className="hidden md:block">Agencia digital en Puebla, Mérida y Querétaro. </span>Transformamos tus ideas en tecnología que genera resultados reales
         </p>
         <div className="mt-12">
           <a 

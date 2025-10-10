@@ -182,7 +182,7 @@ export default function ProjectsCarousel() {
             href="/proyectos"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300"
           >
-            Ver todos los proyectos
+            Ver más proyectos
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

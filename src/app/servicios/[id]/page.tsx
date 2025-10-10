@@ -6,6 +6,7 @@ import ProjectForm from '@/components/ProjectForm';
 import { ServiceIconsLarge } from '@/components/ServiceIcons';
 import TechCarousel from '@/components/TechCarousel';
 import ExamplesCarousel from '@/components/ExamplesCarousel';
+import type { Metadata } from 'next';
 
 const allTechnologies = [
   'JavaScript',
@@ -50,6 +51,64 @@ export function generateStaticParams() {
   return services.map((service) => ({
     id: service.id,
   }));
+}
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const service = services.find((s) => s.id === params.id);
+  
+  if (!service) {
+    return {
+      title: 'Servicio no encontrado - WeLoveCode',
+      description: 'El servicio que buscas no está disponible'
+    };
+  }
+
+  const metadataByService: Record<string, { title: string; description: string; keywords: string }> = {
+    web: {
+      title: 'Diseño de Páginas Web Profesionales | Desarrollo Web Puebla, Mérida, Querétaro',
+      description: 'Empresa de diseño web en Puebla, Mérida y Querétaro. Creación de páginas web profesionales, sitios web optimizados para SEO y desarrollo web a medida. Cotiza tu proyecto web hoy.',
+      keywords: 'diseño de páginas web profesionales, desarrollo de sitios web Puebla, desarrollo de sitios web Mérida, desarrollo de sitios web Querétaro, desarrollador web Puebla, empresa de diseño web, creación de páginas web, cotizar desarrollo web, agencia digital Puebla'
+    },
+    apps: {
+      title: 'Desarrollo de Apps Móviles | Aplicaciones iOS y Android | Puebla, Mérida, Querétaro',
+      description: 'Empresa de desarrollo de apps en Puebla, Mérida y Querétaro. Desarrollo app nativa Android, desarrollo app iOS profesional, aplicaciones móviles a medida. Agencia de desarrollo de apps.',
+      keywords: 'empresa de desarrollo de apps Puebla, empresa de desarrollo de apps Mérida, empresa de desarrollo de apps Querétaro, agencia de desarrollo de apps, empresa de aplicaciones móviles, desarrollo app nativa Android, desarrollo app iOS profesional, desarrollo de aplicaciones a medida, agencia de desarrollo de apps Puebla'
+    },
+    sistemas: {
+      title: 'Desarrollo de CRM y Sistemas Empresariales | Software de Gestión | Puebla',
+      description: 'Empresa CRM Puebla. Desarrollo de sistemas empresariales, software de gestión empresarial, automatización con inteligencia artificial, integración de sistemas y desarrollo de software personalizado.',
+      keywords: 'empresa CRM Puebla, desarrollo de sistemas empresariales, automatización con inteligencia artificial, software de gestión empresarial, soluciones digitales con IA, integración de sistemas, desarrollo de software personalizado, agencia de software Puebla, empresa de automatización Puebla, CRM para negocios Puebla'
+    },
+    ai: {
+      title: 'Automatización con Inteligencia Artificial para Empresas | IA Empresarial Puebla',
+      description: 'Soluciones de inteligencia artificial para empresas en Puebla. Automatización con IA, chatbots inteligentes, procesamiento de lenguaje natural y transformación digital con tecnología de vanguardia.',
+      keywords: 'inteligencia artificial para empresas, automatización con inteligencia artificial, soluciones digitales con IA, agencia de innovación digital, servicios de transformación digital, desarrollo tecnológico para empresas Puebla, empresa tecnológica Puebla'
+    }
+  };
+
+  const metadata = metadataByService[params.id] || {
+    title: `${service.title} - WeLoveCode`,
+    description: service.description,
+    keywords: 'desarrollo de software, agencia digital'
+  };
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      type: 'website',
+      locale: 'es_MX',
+      siteName: 'WeLoveCode'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metadata.title,
+      description: metadata.description
+    }
+  };
 }
 
 export default function ServiceDetailPage({ params }: { params: { id: string } }) {
@@ -393,7 +452,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
                   alt="Programador trabajando"
                   width={320}
                   height={320}
-                  className="relative z-10 drop-shadow-2xl animate-float"
+                  className="relative z-10 drop-shadow-2xl animate-float -mt-4"
                 />
               </div>
             </div>

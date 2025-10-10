@@ -8,29 +8,29 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const services = [
   {
     id: 'web',
-    title: 'Desarrollo Web',
-    description: 'Sitios web modernos, rápidos y optimizados que convierten visitantes en clientes',
+    title: 'Desarrollo Web Profesional',
+    description: 'Diseño de páginas web profesionales en Puebla, Mérida y Querétaro. Sitios web modernos, rápidos y optimizados para SEO',
     image: '/client-laptop-1.png',
     result: '$1M+ en ventas mensuales'
   },
   {
     id: 'apps',
-    title: 'Apps Nativas',
-    description: 'Aplicaciones móviles nativas para iOS y Android con experiencia de usuario excepcional',
+    title: 'Desarrollo de Apps iOS y Android',
+    description: 'Desarrollo de aplicaciones móviles nativas para iOS y Android. Apps profesionales con experiencia de usuario excepcional',
     image: '/mercado-app-1.webp',
     result: 'iOS & Android'
   },
   {
     id: 'sistemas',
-    title: 'Sistemas y CRM',
-    description: 'Soluciones a medida que automatizan y optimizan tus procesos empresariales',
+    title: 'Desarrollo de CRM y Sistemas Empresariales',
+    description: 'Desarrollo de CRM. Software a medida que automatiza y optimiza tus procesos empresariales',
     image: '/mercado-web-laptop-1.png',
     result: '90% de automatización'
   },
   {
     id: 'ai',
-    title: 'Integraciones con IA',
-    description: 'Automatizaciones inteligentes que potencian tu negocio con inteligencia artificial',
+    title: 'Automatización con Inteligencia Artificial',
+    description: 'Soluciones de inteligencia artificial para empresas. Automatizaciones inteligentes que potencian tu negocio',
     image: '/rilsa-web-laptop-1.png',
     result: 'Respuestas automáticas 24/7'
   }
