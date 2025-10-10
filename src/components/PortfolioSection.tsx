@@ -54,6 +54,14 @@ const colorClasses = {
     statBg: 'bg-emerald-900/30',
     statText: 'text-emerald-300',
     highlight: 'text-emerald-400'
+  },
+  cyan: {
+    border: 'border-cyan-500/50 md:border-none',
+    bg: 'from-cyan-900/10',
+    text: 'text-cyan-300',
+    statBg: 'bg-cyan-900/30',
+    statText: 'text-cyan-300',
+    highlight: 'text-cyan-400'
   }
 };
 
