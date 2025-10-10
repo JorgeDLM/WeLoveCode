@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://welovecode.mx'),
   title: "WeLoveCode | Agencia Digital Puebla | Desarrollo Web, Apps y Sistemas con IA",
   description: "Empresa de desarrollo de software en Puebla, Mérida y Querétaro. Diseño de páginas web profesionales, desarrollo de apps iOS/Android, CRM empresariales y automatización con inteligencia artificial. +$50M generados por clientes.",
   keywords: "agencia digital Puebla, desarrollo de sitios web Puebla, desarrollo de sitios web Mérida, desarrollo de sitios web Querétaro, diseño de páginas web profesionales, empresa de desarrollo de apps, desarrollo app nativa Android, desarrollo app iOS profesional, empresa CRM Puebla, desarrollo de sistemas empresariales, automatización con inteligencia artificial, software de gestión empresarial, soluciones digitales con IA, desarrollo de software personalizado, agencia de software Puebla, inteligencia artificial para empresas, agencia de tecnología, cotizar desarrollo web, contratar desarrolladores Puebla, empresa tecnológica Puebla, servicios de transformación digital, desarrollo tecnológico para empresas Puebla",
