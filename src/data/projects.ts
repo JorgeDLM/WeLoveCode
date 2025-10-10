@@ -82,6 +82,46 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'arribo',
+    name: 'Arribo',
+    tagline: 'Valet sin Boletito',
+    logo: '/arribo-app-icon.webp',
+    description: 'Sistema de valet parking digital que elimina boletos físicos. QR para entrega, pago 1-tap, validación offline. Para empresas: operación en vivo, cero fraudes.',
+    fullDescription: 'Arribo revoluciona el servicio de valet parking eliminando completamente los boletos físicos. Los usuarios entregan su auto escaneando un código QR, monitorean el estado en tiempo real, solicitan el auto cuando van saliendo, pagan con un tap y validan la entrega al valet aunque este no tenga internet. Para las empresas de valet: panel de operación en vivo, sistema diseñado para prevenir fraudes, cortes de caja automáticos y limpios. Para los usuarios: cero broncas con boletos perdidos, transparencia total del servicio, recibos y facturas digitales, e historial completo en su teléfono.',
+    mainImage: '/arribo-app-3.webp',
+    mobileImage: '/arribo-app-2.webp',
+    gallery: ['/chofer-1.webp', '/arribo-app-3.webp', '/arribo-app-4.webp', '/arribo-app-1.webp', '/arribo-app-2.webp'],
+    stats: [
+      { label: 'Sin boletos', value: 'Digital' },
+      { label: 'Reducción fraudes', value: '-95%' },
+      { label: 'Tiempo promedio', value: '-40%' }
+    ],
+    color: 'cyan',
+    technologies: ['React Native', 'TypeScript', 'Firebase', 'Node.js', 'PostgreSQL', 'QR Codes', 'Stripe', 'Offline-First'],
+    features: [
+      'Entrega y recepción con código QR único',
+      'Monitoreo de estado del auto en tiempo real',
+      'Pago digital con un solo tap (Stripe integrado)',
+      'Validación del valet sin conexión a internet',
+      'Panel de operación en vivo para empresas',
+      'Sistema diseñado para prevenir fraudes y robos',
+      'Cortes de caja automáticos sin errores',
+      'Recibos y facturas digitales automáticos',
+      'Historial completo de servicios en el celular',
+      'Transparencia total: ubicación y estado del auto',
+      'Notificaciones push cuando el auto está listo',
+      'Sistema de calificación y rating para valets',
+      'Gestión de múltiples ubicaciones de valet',
+      'Dashboard con métricas de operación en tiempo real',
+      'Control de turnos y asignación de valets',
+      'Reportes financieros automáticos',
+      'Sistema de propinas digital integrado',
+      'Alertas de seguridad y geovallas',
+      'Modo offline funcional para valets',
+      'Sincronización automática al recuperar conexión'
+    ]
+  },
+  {
     id: 'rilsa',
     name: 'RILSA',
     tagline: 'Sistema de Gestión Empresarial',
@@ -102,38 +142,6 @@ export const projects: Project[] = [
       'Control de inventario',
       'Reportes y analytics',
       'Sistema de roles y permisos'
-    ]
-  },
-  {
-    id: 'client',
-    name: 'Client',
-    tagline: 'Marketplace de Propiedades Comisionables',
-    logo: '/client-logo.webp',
-    logoAlt: '/client-app-icon.webp',
-    description: 'Aplicación móvil de marketplace que conecta agentes inmobiliarios con propiedades comisionables. Aumentó conversión en +80% y productividad en +150%.',
-    fullDescription: 'Plataforma móvil completa diseñada para revolucionar el mercado inmobiliario conectando agentes con propiedades comisionables. Sistema integral que incluye gestión de propiedades, cálculo automático de comisiones, seguimiento de leads, comunicación en tiempo real y analytics avanzados para maximizar las ventas.',
-    mainImage: '/client-app-1.webp',
-    mobileImage: '/client-app-2.webp',
-    stats: [
-      { label: 'Productividad', value: '+150%' },
-      { label: 'Conversión', value: '+80%' }
-    ],
-    color: 'green',
-    technologies: ['React Native', 'TypeScript', 'MongoDB', 'Node.js', 'Firebase', 'AWS'],
-    gallery: ['/client-app-1.webp', '/client-laptop-1.png'],
-    features: [
-      'Marketplace de propiedades con búsqueda avanzada',
-      'Sistema de comisiones automatizado',
-      'Gestión de leads y pipeline de ventas',
-      'Chat en tiempo real entre agentes y clientes',
-      'Notificaciones push para nuevas propiedades',
-      'Calculadora de comisiones integrada',
-      'Galería de fotos y tours virtuales',
-      'Filtros por ubicación, precio y características',
-      'Dashboard analítico para agentes',
-      'Sistema de favoritos y alertas',
-      'Integración con WhatsApp',
-      'Seguimiento de visitas y citas'
     ]
   },
   {
@@ -176,6 +184,38 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'client',
+    name: 'Client',
+    tagline: 'Marketplace de Propiedades Comisionables',
+    logo: '/client-logo.webp',
+    logoAlt: '/client-app-icon.webp',
+    description: 'Aplicación móvil de marketplace que conecta agentes inmobiliarios con propiedades comisionables. Aumentó conversión en +80% y productividad en +150%.',
+    fullDescription: 'Plataforma móvil completa diseñada para revolucionar el mercado inmobiliario conectando agentes con propiedades comisionables. Sistema integral que incluye gestión de propiedades, cálculo automático de comisiones, seguimiento de leads, comunicación en tiempo real y analytics avanzados para maximizar las ventas.',
+    mainImage: '/client-app-1.webp',
+    mobileImage: '/client-app-2.webp',
+    stats: [
+      { label: 'Productividad', value: '+150%' },
+      { label: 'Conversión', value: '+80%' }
+    ],
+    color: 'green',
+    technologies: ['React Native', 'TypeScript', 'MongoDB', 'Node.js', 'Firebase', 'AWS'],
+    gallery: ['/client-app-1.webp', '/client-laptop-1.png'],
+    features: [
+      'Marketplace de propiedades con búsqueda avanzada',
+      'Sistema de comisiones automatizado',
+      'Gestión de leads y pipeline de ventas',
+      'Chat en tiempo real entre agentes y clientes',
+      'Notificaciones push para nuevas propiedades',
+      'Calculadora de comisiones integrada',
+      'Galería de fotos y tours virtuales',
+      'Filtros por ubicación, precio y características',
+      'Dashboard analítico para agentes',
+      'Sistema de favoritos y alertas',
+      'Integración con WhatsApp',
+      'Seguimiento de visitas y citas'
+    ]
+  },
+  {
     id: 'poramoralcampo',
     name: 'Por Amor al Campo',
     tagline: 'E-commerce Agrícola',
@@ -207,46 +247,6 @@ export const projects: Project[] = [
       'Notificaciones push para actualizaciones de pedidos',
       'Catálogo con imágenes de alta calidad',
       'Gestión de múltiples direcciones de entrega'
-    ]
-  },
-  {
-    id: 'arribo',
-    name: 'Arribo',
-    tagline: 'Valet sin Boletito',
-    logo: '/arribo-app-icon.webp',
-    description: 'Sistema de valet parking digital que elimina boletos físicos. QR para entrega, pago 1-tap, validación offline. Para empresas: operación en vivo, cero fraudes.',
-    fullDescription: 'Arribo revoluciona el servicio de valet parking eliminando completamente los boletos físicos. Los usuarios entregan su auto escaneando un código QR, monitorean el estado en tiempo real, solicitan el auto cuando van saliendo, pagan con un tap y validan la entrega al valet aunque este no tenga internet. Para las empresas de valet: panel de operación en vivo, sistema diseñado para prevenir fraudes, cortes de caja automáticos y limpios. Para los usuarios: cero broncas con boletos perdidos, transparencia total del servicio, recibos y facturas digitales, e historial completo en su teléfono.',
-    mainImage: '/arribo-app-3.webp',
-    mobileImage: '/arribo-app-2.webp',
-    gallery: ['/chofer-1.webp', '/arribo-app-3.webp', '/arribo-app-4.webp', '/arribo-app-1.webp', '/arribo-app-2.webp'],
-    stats: [
-      { label: 'Sin boletos', value: 'Digital' },
-      { label: 'Reducción fraudes', value: '-95%' },
-      { label: 'Tiempo promedio', value: '-40%' }
-    ],
-    color: 'cyan',
-    technologies: ['React Native', 'TypeScript', 'Firebase', 'Node.js', 'PostgreSQL', 'QR Codes', 'Stripe', 'Offline-First'],
-    features: [
-      'Entrega y recepción con código QR único',
-      'Monitoreo de estado del auto en tiempo real',
-      'Pago digital con un solo tap (Stripe integrado)',
-      'Validación del valet sin conexión a internet',
-      'Panel de operación en vivo para empresas',
-      'Sistema diseñado para prevenir fraudes y robos',
-      'Cortes de caja automáticos sin errores',
-      'Recibos y facturas digitales automáticos',
-      'Historial completo de servicios en el celular',
-      'Transparencia total: ubicación y estado del auto',
-      'Notificaciones push cuando el auto está listo',
-      'Sistema de calificación y rating para valets',
-      'Gestión de múltiples ubicaciones de valet',
-      'Dashboard con métricas de operación en tiempo real',
-      'Control de turnos y asignación de valets',
-      'Reportes financieros automáticos',
-      'Sistema de propinas digital integrado',
-      'Alertas de seguridad y geovallas',
-      'Modo offline funcional para valets',
-      'Sincronización automática al recuperar conexión'
     ]
   }
 ];
